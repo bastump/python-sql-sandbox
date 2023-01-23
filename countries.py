@@ -2,7 +2,7 @@ import csv, sqlite3
 conn = sqlite3.connect("countries.db")
 c = conn.cursor()
 
-c.execute('DROP TABLE countries;')
+c.execute('DROP TABLE IF EXISTS countries;')
 
 c.execute('''
     CREATE TABLE countries (
