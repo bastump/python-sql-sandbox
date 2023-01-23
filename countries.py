@@ -21,9 +21,5 @@ with open('countries.csv','r') as fin:
 
 c.executemany("INSERT INTO countries (name, alpha, code, region, intermediate_region) VALUES (?, ?, ?, ?, ?);", to_db)
 
-c.execute('''
-    SELECT * FROM countries
-    ''')
-
 conn.commit()
 c.close()
